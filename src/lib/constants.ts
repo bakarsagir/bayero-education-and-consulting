@@ -1,12 +1,15 @@
-export const SITE_NAME = 'Bayero Education'
+export const SITE_NAME = 'Bayero Education & Consulting'
 export const SITE_DESCRIPTION = 'Expert education consulting and university placement services worldwide'
 
 export const NAVIGATION = [
+  { name: 'About', href: '/about' },
   { name: 'Study Abroad', href: '/study-abroad' },
-  { name: 'Programs', href: '/programs' },
-  { name: 'Universities', href: '/universities' },
   { name: 'Services', href: '/services' },
-  { name: 'Resources', href: '/resources' }
+  { name: 'Universities', href: '/universities' },
+  { name: 'Programs', href: '/programs' },
+  { name: 'Resources', href: '/resources' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Sign in', href: '/signin' }
 ] as const
 
 export const SERVICES = [

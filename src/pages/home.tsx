@@ -2,20 +2,20 @@ import { Link } from 'react-router-dom'
 
 export function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-[#f3cf23] text-black min-h-[calc(100vh-4rem)] flex items-center">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-6xl font-montserrat font-bold mb-6 leading-tight">
               Your Gateway to Global Education
             </h1>
-            <p className="text-xl mb-8">
+            <p className="text-2xl font-montserrat mb-12 text-black/80">
               Expert guidance for international education and university placements
             </p>
             <Link 
               to="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="inline-block bg-black text-white px-10 py-4 rounded-lg font-montserrat font-semibold hover:bg-black/80 transition-all duration-200 text-lg"
             >
               Book a Consultation
             </Link>
@@ -24,10 +24,10 @@ export function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-16">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-4xl font-montserrat font-bold text-center mb-16">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 title: 'Educational Consulting',
@@ -42,9 +42,9 @@ export function Home() {
                 description: 'Comprehensive assistance for your transition abroad.'
               }
             ].map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+              <div key={index} className="bg-white border border-black/10 p-8 rounded-lg hover:shadow-lg transition-all duration-200">
+                <h3 className="text-2xl font-montserrat font-semibold mb-4">{service.title}</h3>
+                <p className="text-lg text-black/70 font-helvetica">{service.description}</p>
               </div>
             ))}
           </div>
@@ -52,13 +52,13 @@ export function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Start Your Journey?</h2>
-          <p className="text-xl mb-8">Book a free consultation with our education experts</p>
+      <section className="bg-black text-white py-24">
+        <div className="container mx-auto px-4 text-center max-w-4xl">
+          <h2 className="text-4xl font-montserrat font-bold mb-8">Ready to Start Your Journey?</h2>
+          <p className="text-2xl font-montserrat mb-12">Book a free consultation with our education experts</p>
           <Link 
             to="/contact"
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            className="inline-block bg-[#f3cf23] text-black px-10 py-4 rounded-lg font-montserrat font-semibold hover:bg-[#f3cf23]/90 transition-all duration-200 text-lg"
           >
             Book Now
           </Link>
