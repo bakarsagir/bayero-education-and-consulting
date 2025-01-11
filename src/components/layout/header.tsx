@@ -9,16 +9,16 @@ export function Header() {
 
   return (
     <header className="fixed w-full top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-black/10 z-50">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
-            <img src="/images/Logo1.png" alt={SITE_NAME} className="h-8 w-auto" />
+            <img src="/images/Logo1.png" alt={SITE_NAME} className="h-14 w-auto" />
           </Link>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
+            className="-m-2.5 inline-flex items-center justify-center rounded p-2.5 text-black hover:text-[#f3cf23] transition-colors"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -30,7 +30,7 @@ export function Header() {
             <Link
               key={item.name}
               to={item.href}
-              className="text-sm font-montserrat font-semibold leading-6 text-black hover:text-[#f3cf23] transition-colors"
+              className="text-base font-montserrat font-semibold leading-6 text-black hover:text-[#f3cf23] transition-colors"
             >
               {item.name}
             </Link>
@@ -39,7 +39,7 @@ export function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link 
             to="/signin" 
-            className="text-sm font-montserrat font-semibold leading-6 bg-[#f3cf23] text-black px-6 py-2 rounded hover:bg-black hover:text-white transition-all duration-200"
+            className="text-base font-montserrat font-semibold leading-6 bg-[#f3cf23] text-black px-6 py-2 rounded hover:bg-black hover:text-white transition-all duration-200"
           >
             {NAVIGATION[NAVIGATION.length - 1].name}
           </Link>
@@ -50,11 +50,11 @@ export function Header() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-black/10">
           <div className="flex items-center justify-between">
             <Link to="/" className="-m-1.5 p-1.5">
-              <img src="/images/Logo1.png" alt={SITE_NAME} className="h-8 w-auto" />
+              <img src="/images/Logo1.png" alt={SITE_NAME} className="h-12 w-auto" />
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-black"
+              className="-m-2.5 rounded p-2.5 text-black hover:text-[#f3cf23] transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -68,7 +68,7 @@ export function Header() {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-montserrat font-semibold leading-7 text-black hover:bg-[#f3cf23]/10"
+                    className="-mx-3 block rounded px-3 py-2 text-base font-montserrat font-semibold leading-7 text-black hover:bg-[#f3cf23]/10 transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -76,7 +76,7 @@ export function Header() {
                 ))}
                 <Link
                   to="/signin"
-                  className="block w-full text-center rounded-lg px-3 py-2.5 text-base font-montserrat font-semibold leading-7 bg-[#f3cf23] text-black hover:bg-black hover:text-white transition-all duration-200"
+                  className="block w-full text-center rounded px-3 py-2.5 text-base font-montserrat font-semibold leading-7 bg-[#f3cf23] text-black hover:bg-black hover:text-white transition-all duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {NAVIGATION[NAVIGATION.length - 1].name}

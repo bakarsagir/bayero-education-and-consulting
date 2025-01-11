@@ -7,16 +7,18 @@ import { Programs } from './pages/programs'
 import { Universities } from './pages/universities'
 import Services from './pages/services'
 import { Resources } from './pages/resources'
-import Contact from './pages/contact'
+import { Contact } from './pages/contact'
+import { About } from './pages/About'
 import { NotFound } from './pages/not-found'
 
 function App() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-20">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/study-abroad" element={<StudyAbroad />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/universities" element={<Universities />} />
